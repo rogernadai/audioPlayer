@@ -1,0 +1,90 @@
+audio-player {
+
+    .audio-container{
+        width:  100%;
+        height: 30px;
+        background: green;        
+        padding-top: 4px;      
+        
+        ion-icon {
+            font-size: 1.2em;
+        }
+    }
+
+    .audio-controls{
+        width : fit-content;
+        margin: auto;
+        background: white;
+        border-radius: 10px;
+        padding-top: 3px;
+        height: 23px;
+        min-width: 340px;
+        text-align: center;        
+        display: flex;
+        padding-right: 10px;
+        padding-left: 10px;
+
+        .volume{
+            display: inline-block;
+            position: relative;
+            background:white;
+        
+            &.volume-open{
+                .volume-controls{
+                    display: block;
+                }
+            }
+
+            .volume-controls{
+                position: absolute;
+                width: 22px;
+                height: 100px;
+                background: gray;
+                padding: 10px 0;
+                display: none;
+                z-index: 10;
+                
+                .volume-controls-bar{
+                    position: relative;
+                    height: 90%;
+                    width: 2px;
+                    margin: auto;
+                    background: blue; 
+                    display: inline-block;
+                }
+                .volume-controls-value{
+                    background: yellow;
+                    width: 10px;
+                    height: 2px;
+                    margin-left: -4px;
+                }
+            }
+        }
+    }     
+
+    .audio-add{
+        color: white;
+        position: absolute;
+        top: 3px;
+        padding: 3px;
+        right: 3px;
+    }
+    .timer-container{
+        display: inline-block;
+        flex: 3;
+        padding-top: 1px;
+    }
+
+    .progress-bar{
+        flex: 3;
+        background: blue;
+        margin-top: 6px;
+        height: 10px;
+
+        .progress-bar-value{
+            height: 100%;
+            background: grey;
+            width: 0;
+        }
+    }
+}
